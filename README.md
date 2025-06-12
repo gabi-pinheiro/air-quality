@@ -1,22 +1,23 @@
-<!-- <div align="center"> -->
-<img src="https://github.com/OgawaSama/air-quality/raw/tree.png" alt="tiny tree" width="500"/>
+<div align="center">
+    <img src="https://raw.githubusercontent.com/OgawaSama/air-quality/master/tree.png" alt="tiny tree" width="1000"/>
 
-<!-- </div> -->
+</div> 
 
 # Decision Trees for Air Quality Dataset
 
 This program creates a decision tree for solving the Air Quality assessment problem, where multiple variables may help determine a region's air quality.
-The `data.csv` is from [kaggle](https://www.kaggle.com/datasets/mujtabamatin/air-quality-and-pollution-assessment) by Mujtaba Mateen.
+The `data.csv` is from [Kaggle](https://www.kaggle.com/datasets/mujtabamatin/air-quality-and-pollution-assessment) by Mujtaba Mateen.
 
 This program allows the user to specify a method in which to determine the Tree's depth, their targetted accuracy, which rendering engine to use and whether or not to run benchmarks instead.
 
 The default parameters are:
-* No maximum depth defined; runs until exhausted
-* If `--depth minimum` is selected, target accuracy is 0.85
-* Test/Train ratio is 30/70
-* `data.csv` as the dataset file
-* `tree.png` as the Tree's image output file
-* `metrics.csv` as the benchmark's output file
+* No maximum depth defined, runs until exhausted;
+* If `--depth minimum` is selected, target accuracy is 0.85;
+* Test/Train ratio is 30/70;
+* Graphviz as the renderer;
+* `data.csv` as the dataset file;
+* `tree.png` as the Tree's image output file;
+* `metrics.csv` as the benchmark's output file.
 
 
 ## Running the program
