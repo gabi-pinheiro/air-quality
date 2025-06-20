@@ -15,12 +15,6 @@ df = pd.read_csv("cleaned.csv")
 X = df.drop("Air Quality", axis=1)
 y = df["Air Quality"]
 
-
-# # Split data
-# X_train, X_test, y_train, y_test = train_test_split(
-#     X, y, test_size=0.2, random_state=42
-# )
-
 k = 10  # Number of folds
 skf = StratifiedKFold(n_splits=k, shuffle=True, random_state=42)
 
@@ -75,7 +69,7 @@ print(f"Average accuracy after {k} folds: {np.mean(accuracies): .4f}")
 print(f"Best accuracy between folds: {best_acc:.4f}")
 
 
-# RC Curve using OvR macro-average
+# ROC Curve using OvR macro-average
 # Calcula a curva ROC pra cada classe e depois tira a média)
 
 # Necessary to plot
