@@ -33,17 +33,12 @@ for train_index, test_index in skf.split(X, y):
     X_train, X_test = X.iloc[train_index], X.iloc[test_index]
     y_train, y_test = y.iloc[train_index], y.iloc[test_index]
 
-    # Scaler // aproxima pra uma distribuicao normal (eu acho)
-    scaler = StandardScaler()
-    X_train = scaler.fit_transform(X_train)
-    X_test = scaler.transform(X_test)
-
     mlp = MLPClassifier(
     hidden_layer_sizes=(64,32),
     activation='relu',
     solver='adam',
     max_iter=500,
-    random_state=42,
+    random_state=42+fold,
     early_stopping=True
     )
     mlp.fit(X_train, y_train)
