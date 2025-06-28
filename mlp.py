@@ -18,8 +18,6 @@ y = df["Air Quality"]
 k = 10  # Number of folds
 skf = StratifiedKFold(n_splits=k, shuffle=True, random_state=42)
 
-accuracies = []
-
 # Will be used to analyze the accuracy and plot the ROC curve later.
 fold_data = []
 
@@ -45,7 +43,6 @@ for train_index, test_index in skf.split(X, y):
     acc = accuracy_score(y_test, y_pred)
     print(f"Accuracy: {acc: .4f}")
     print(classification_report(y_test, y_pred))
-    accuracies.append(acc)
 
     # Save the data necessary to plot the ROC curve
     fold_data.append({
